@@ -1,0 +1,48 @@
+stages:
+  - install
+  - test
+  - build
+  - deploy
+
+cache:
+  key: ${CI_COMMIT_REF_SLUG}
+  paths:
+    - node_modules/
+
+install_dependencies:
+  stage: install
+  script:
+    - npm install
+
+testing_testing:
+  stage: test
+  script: npm test
+
+build:
+  stage: build
+  script: npm run build
+  artifacts:
+    paths:
+      - build/
+    expire_in: 120 minutes
+
+deploy_on_servertest:
+  stage: deploy
+  when: on_success
+  only:
+    - master
+  tags:
+    - deploy
+    - servertest
+    - html
+  environment:
+    name: servertest
+  variables:
+    DEPLOY_PATH: /var/www/servertest/data/www/fronttest.servertest.pro/
+    DEPLOY_USER: servertest
+    SERVERTEST_DOMAIN: fronttest.servertest.pro
+    SERVERTEST_USER: servertest
+  script:
+    - sudo -H -E ~/scripts/deploy/configure_server.sh
+    - sudo -H -E ~/scripts/deploy/deploy_html.sh
+

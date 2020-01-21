@@ -1,0 +1,75 @@
+<!--
+
+╔╔╗╔╔╔═╔═  ╔╗╦║║╦╗╦╔╗
+║║║╠╠╠═╠═  ╚╗║║║║║║║║
+╚╚╝║║╚═╚═  ╚╝║╚╝╩╝╩╚╝
+
+www.coffeestudio.ru
+support: web@coffeestudio.ru
+creature: 2019
+
+-->
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1 , viewport-fit=cover">
+    <meta content="telephone=no" name="format-detection">
+    <meta name="HandheldFriendly" content="true">
+
+    <title>{{ title }}</title>
+    <meta name="description" content="{{ description }}">
+    <meta name="keywords" content="{{ keywords }}">
+    <link rel="canonical" href="{{ canonical }}">
+    {% if NODE_ENV == 'dev'%}
+    <link href="css/plugins.css" type="text/css" rel="stylesheet">
+    <link href="css/styles.css" type="text/css" rel="stylesheet">
+    {% else %}
+    <link rel="stylesheet preload" type="text/css" as="style" href="css/plugins.min.css">
+    <link rel="stylesheet preload" type="text/css" as="style" href="css/styles.min.css">
+    <noscript>
+        <link rel="stylesheet" type="text/css" href="css/plugins.min.css">
+        <link rel="stylesheet" type="text/css" href="css/styles.min.css">
+    </noscript>
+    <script>
+        /*! loadCSS. [c]2017 Filament Group, Inc. MIT License */
+        !function(a){"use strict";var b=function(b,c,d){function j(a){if(e.body)return a();setTimeout(function(){j(a)})}function l(){f.addEventListener&&f.removeEventListener("load",l),f.media=d||"all"}var g,e=a.document,f=e.createElement("link");if(c)g=c;else{var h=(e.body||e.getElementsByTagName("head")[0]).childNodes;g=h[h.length-1]}var i=e.styleSheets;f.rel="stylesheet",f.href=b,f.media="only x",j(function(){g.parentNode.insertBefore(f,c?g:g.nextSibling)});var k=function(a){for(var b=f.href,c=i.length;c--;)if(i[c].href===b)return a();setTimeout(function(){k(a)})};return f.addEventListener&&f.addEventListener("load",l),f.onloadcssdefined=k,k(l),f};"undefined"!=typeof exports?exports.loadCSS=b:a.loadCSS=b}("undefined"!=typeof global?global:this);
+        /*! loadCSS rel=preload polyfill. [c]2017 Filament Group, Inc. MIT License */
+        !function(a){if(a.loadCSS){var b=loadCSS.relpreload={};if(b.support=function(){try{return a.document.createElement("link").relList.supports("preload")}catch(a){return!1}},b.poly=function(){for(var b=a.document.getElementsByTagName("link"),c=0;c<b.length;c++){var d=b[c];"preload"===d.rel&&"style"===d.getAttribute("as")&&(a.loadCSS(d.href,d,d.getAttribute("media")),d.rel=null)}},!b.support()){b.poly();var c=a.setInterval(b.poly,300);a.addEventListener&&a.addEventListener("load",function(){b.poly(),a.clearInterval(c)}),a.attachEvent&&a.attachEvent("onload",function(){a.clearInterval(c)})}}}(this);
+    </script>
+    <script src="js/css-polyfills.min.js"></script>
+    {% endif %}
+
+
+    {% include 'layouts/_favicon.html' %}
+
+    {% include 'layouts/_og.html' %}
+</head>
+<body>
+<div class="container">
+    <div class="content">
+        {% include 'sections/header.html' %}
+
+        {% block content %}{% endblock %}
+    </div>
+
+    {% include 'sections/footer.html' %}
+    <div class="loader">
+        <div class="lds-dual-ring"></div>
+    </div>
+</div>
+
+<script defer src="js/combined.min.js"></script>
+<script defer>
+    $(document).ajaxStart(function () {
+        $('.loader').show();
+    }).ajaxStop(function () {
+        $('.loader').hide();
+    });
+</script>
+<script defer src="js/libs.js"></script>
+{% include 'layouts/_counters.html' %}
+
+</body>
+</html>

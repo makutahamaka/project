@@ -1,0 +1,30 @@
+{
+  "addCssLibs": [
+    "./src/css/csslibs/*.css"
+  ],
+  "addJsBefore": [
+    "./src/js/jslibs/jquery-3.4.1.min.js"
+  ],
+  "addJsAfter": [
+    "./src/js/jslibs/swiper.min.js"
+  ],
+  "copiedJs": [
+    "./src/js/libs.js",
+    "./src/js/css-polyfills.min.js"
+
+  ],
+  "dirs": {
+    "srcPath": "./src/",
+    "buildPath": "./build/",
+    "cssPath": "./src/css/",
+    "htmlPath": "./src/html/",
+    "imgGeneral": "./src/images/general/",
+    "imgContent": "./src/images/content/",
+    "spritePNG": "./src/images/sprite/png/",
+    "imagesSVG": "./src/images/svg/",
+    "fontsPath": "./src/fonts/",
+    "staticPath": "./src/static/",
+    "srcFavicon": "./src/favicon/",
+    "buildFavicon": "./build/favicon/"
+  }
+}

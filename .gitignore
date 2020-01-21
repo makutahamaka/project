@@ -1,1 +1,15 @@
 .idea/
+.Spotlight-V100
+.Trashes
+node_modules/
+build/
+vscode
+.pnp.js
+.pnp
+ehthumbs.db
+Thumbs.db
+package-lock.json
+yarn.lock
+.DS_Store
+*.sublime-project
+*.sublime-workspace
