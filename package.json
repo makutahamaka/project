@@ -1,10 +1,10 @@
 {
-  "name": "CoffeeStudio",
+  "name": "coffeestudio",
   "version": "2.0.0",
   "description": "Startkit for HTML/CSS/JS pages layout.",
   "main": "gulpfile.js",
   "author": "Stas Chumakov (Kosmos)",
-  "license": "",
+  "license": "ISC",
   "repository": {
     "type": "git",
     "url": "http://srv-gitlab.coffeestudio.ru/coffeestudio_ru/coffeestuio_html"
