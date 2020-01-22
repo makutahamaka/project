@@ -1,18 +1,114 @@
-@import "base/variables";
-@import "base/functions";
-@import "base/mixins";
-@import "base/reset";
-@import "base/sprite";
-@import "base/fonts";
+//@import "base/variables";
+//@import "base/functions";
+//@import "base/mixins";
+//@import "base/reset";
+//@import "base/sprite";
+//@import "base/fonts";
+//
+//@import "base/base";
+//
+//@import "base/loader";
+//
+//
+//@import "sections/header";
+//@import "sections/footer";
+//
+//
+//
+//@import "base/print";
 
-@import "base/base";
+body{
+  box-sizing: border-box;
+  font-family: Ubuntu;
+  background: rgba(251, 251, 251, 1.0);
+}
 
-@import "base/loader";
+.header{
+  height: 120px;
+  margin: 10px 20px 0 40px;
+}
+.header__contacts{
+  height: 50px;
+}
+.header__contacts span{
+  font-style: Regular;
+  font-size: 13px;
+  color: rgba(37, 37, 37, 0.3);
+}
+.contacts__icon1{
+  float: right;
 
-
-@import "sections/header";
-@import "sections/footer";
-
-
-
-@import "base/print";
+}
+.contacts__icon2{
+  float: right;
+  margin-right: 20px;
+}
+.contacts__adress{
+  float: right;
+  margin-right: 30px;
+  background: url(/images/icons/pin.svg) left no-repeat;
+  padding-left: 25px;
+}
+.contacts__mail{
+  float: right;
+  margin-right: 70px;
+  background: url(/images/icons/mail.svg) left no-repeat;
+  padding-left: 25px;
+}
+.contacts__tel{
+  float: right;
+  margin-right: 70px;
+  background: url(/images/icons/phone.svg) left no-repeat;
+  padding-left: 25px;
+  font-weight: bold;
+}
+.nav__button{
+  float: right;
+  background: #3067D1;
+  border-radius: 4px;
+  height: 50px;
+  width: 160px;
+  color: #ffffff;
+  border: 0;
+  letter-spacing: 1px;
+}
+.nav__button:hover{
+  border: 4px solid #5583DD;
+}
+.nav__button:active{
+  background: #1E52B8;
+  color: #A3BAE8;
+}
+.nav__menu{
+  float: right;
+  margin: 15px 0 0 0;
+}
+.nav__menu-item{
+  display: inline-block;
+  margin-right:35px;
+}
+.nav__menu-item:last-child{
+  margin-right: 45px;
+}
+.nav__menu-item:not(:last-child):after{
+  content: "/";
+  color: #BCCBDE;
+  transform: rotate(135deg);
+  padding-left: 50px;
+}
+.nav__menu-item a{
+  text-decoration: none;
+  color: black;
+}
+.nav__menu-item:first-child{
+  background: url(/images/Rectangle.svg) center no-repeat;
+  padding-left: 60px;
+}
+.header__logo2{
+  padding:0 0 30px 10px;
+}
+.header__logo3{
+  position: absolute;
+  top: 110px;
+  left: 120px;
+}
