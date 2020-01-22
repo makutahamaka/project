@@ -31,21 +31,21 @@ body {
 .contacts__adress {
   float: right;
   margin-right: 30px;
-  background: url(/images/icons/pin.svg) left no-repeat;
+  background: url(../../images/header/icons/pin.svg) left no-repeat;
   padding-left: 25px;
 }
 
 .contacts__mail {
   float: right;
   margin-right: 70px;
-  background: url(/images/icons/mail.svg) left no-repeat;
+  background: url(../../images/header/icons/mail.svg) left no-repeat;
   padding-left: 25px;
 }
 
 .contacts__tel {
   float: right;
   margin-right: 70px;
-  background: url(/images/icons/phone.svg) left no-repeat;
+  background: url(../../images/header/icons/phone.svg) left no-repeat;
   padding-left: 25px;
   font-weight: bold;
 }
@@ -97,7 +97,7 @@ body {
 }
 
 .nav__menu-item:first-child {
-  background: url(/images/Rectangle.svg) center no-repeat;
+  background: url(../../images/header/Rectangle.svg) center no-repeat;
   padding-left: 60px;
 }
 
