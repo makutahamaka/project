@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
     <link href="https://fonts.googleapis.com/css?family=Ubuntu:300,400,700&display=swap&subset=cyrillic,cyrillic-ext" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="../css/sass/styles.css">
+    <script src="../js/jslibs/swiper.min.js"></script>
     <title>Document</title>
 </head>
 <body>
@@ -34,8 +35,8 @@
 </header>
 
 
-<main class="main">
-    <div class="main__block">
+<section class="section">
+    <div class="section__block">
         <h1 class="block__title">КУРСЫ АНГЛИЙСКОГО<br>ЯЗЫКА</h1>
         <span class="block__elem1"><a href="#">Нескучные преподаватели</a></span>
         <span class="block__elem2"><a href="#">Комфортное пространство</a></span><br>
@@ -43,7 +44,7 @@
         <span class="block__elem4"><a href="#">В самом центре города</a></span><br>
         <button class="block__button">ЗАПИСАТЬСЯ</button>
     </div>
-    <div class="main__video">
+    <div class="section__video">
         <div class="video__overlay"></div>
         <video poster="../images/video/videoposter.png" tabindex="0" width="800" height="500" class="video">
             <source src="../images/video/vid.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
@@ -51,7 +52,25 @@
             <source src="../images/video/vid.ogv" type='video/ogg; codecs="theora, vorbis"'>
         </video>
     </div>
-</main>
+</section>
+<section class="section2">
+    <a href="#"><span class="section2__text">все программы обучения</span></a>
+    <h1 class="section2__title">ПРОГРАММЫ ОБУЧЕНИЯ</h1><br><br><br><br><br>
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="../images/main/img_boat.svg"></div>
+            <div class="swiper-slide"><img src="../images/main/img_boat.svg"></div>
+            <div class="swiper-slide"><img src="../images/main/img_boat.svg"></div>
+            <div class="swiper-slide"><img src="../images/main/img_boat.svg"></div>
+            <div class="swiper-slide"><img src="../images/main/img_boat.svg"></div>
+            <div class="swiper-slide"><img src="../images/main/img_boat.svg"></div>
+            <div class="swiper-slide"><img src="../images/main/img_boat.svg"></div>
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+    </div>
+</section>
+
 </body>
 </html>
 </body>

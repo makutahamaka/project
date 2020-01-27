@@ -4,6 +4,11 @@ body {
   background: #fbfbfb;
 }
 
+h1 {
+  font-size: 52px;
+  font-weight: bold;
+}
+
 .header {
   height: 120px;
   margin: 10px 20px 0 40px;
@@ -110,16 +115,13 @@ body {
   left: 120px;
 }
 
-.main {
+.section {
   height: 600px;
   padding: 40px 0 0 140px;
-  background-image: url(../../images/main/Unionmain.svg), url(../../images/main/Vectormain.svg);
-  background-position: right;
-  background-repeat: no-repeat;
-  background-size: contain;
+  background: url(../../images/main/Unionmain.svg) 80% 35% no-repeat, url(../../images/main/Vectormain.svg) 100% 100% no-repeat;
 }
 
-.main__block {
+.section__block {
   padding-top: 20px;
   font-size: 18px;
   font-weight: bold;
@@ -127,7 +129,7 @@ body {
   width: 700px;
 }
 
-.main__block a {
+.section__block a {
   text-decoration: none;
   color: black;
 }
@@ -185,12 +187,12 @@ body {
   color: #A3BAE8;
 }
 
-.main__video {
+.section__video {
   margin-right: 40px;
   float: right;
 }
 
-.main__video {
+.section__video {
   position: relative;
   width: 800px;
   height: 500px;
@@ -208,6 +210,65 @@ body {
 
 .video__overlay.o {
   background: none;
+}
+
+.section2 {
+  height: 720px;
+  background: url("../../images/main/bgsection.svg") 0 100% no-repeat, url("../../images/main/bgsection2.svg") 90% 90% no-repeat;
+}
+
+.section2__button {
+  float: right;
+  height: 10px;
+  width: 10px;
+  margin-right: 20px;
+}
+
+.section2__text {
+  background: url("../../images/main/finger.svg") right center no-repeat;
+  float: right;
+  margin-right: 20px;
+  padding-right: 20px;
+  color: #3067D1;
+  text-decoration: none;
+}
+
+.section2__title {
+  float: right;
+  display: inline-block;
+  margin: 0 30% 0 0;
+}
+
+.section2__block {
+  margin: 0 20px;
+  background-image: url("../../images/main/bgblock2.svg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: 50% 50%;
+}
+
+.swiper-container {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
 }
 
 /*# sourceMappingURL=styles.css.map */
