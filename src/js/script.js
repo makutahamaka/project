@@ -15,4 +15,10 @@ function play() {
         vid.pause();
         overlay.className = "";
     }
-} 
+}
+var swiper = new Swiper('.swiper-container', {
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+});
