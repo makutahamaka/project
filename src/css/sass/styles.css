@@ -3,6 +3,13 @@ body {
   font-family: Ubuntu, serif;
   background: #fbfbfb;
 }
+h1{
+  font-family: Ubuntu;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 52px;
+  line-height: 72px;
+}
 
 .header {
   height: 120px;
@@ -11,46 +18,60 @@ body {
 
 .header__contacts {
   height: 50px;
+  display: flex;
+  justify-content: flex-end;
 }
 
 .header__contacts span {
   font-size: 13px;
   color: rgba(37, 37, 37, 0.3);
+  height: 18px;
 }
-
-.contacts__icon1 {
-  float: right;
-}
-
 .contacts__icon2 {
-  float: right;
   margin-right: 20px;
 }
 
 .contacts__adress {
-  float: right;
   margin-right: 30px;
   background: url(../../images/header/icons/pin.svg) left no-repeat;
   padding-left: 25px;
 }
 
 .contacts__mail {
-  float: right;
   margin-right: 70px;
   background: url(../../images/header/icons/mail.svg) left no-repeat;
   padding-left: 25px;
 }
 
 .contacts__tel {
-  float: right;
   margin-right: 70px;
   background: url(../../images/header/icons/phone.svg) left no-repeat;
   padding-left: 25px;
   font-weight: bold;
 }
+.header__nav{
+  display: flex;
+  justify-content: space-between;
+}
+.header__logo{
+  position: relative;
+  flex-grow: 1;
+}
+.header__logo1 {
+  position: absolute;
+  bottom: 1px;
+}
+.header__logo2 {
+  position: absolute;
+  left: 70px;
+}
 
+.header__logo3 {
+  position: absolute;
+  top: 40px;
+  left: 70px;
+}
 .nav__button {
-  float: right;
   background: #3067D1;
   border-radius: 4px;
   height: 50px;
@@ -67,11 +88,6 @@ body {
 .nav__button:active {
   background: #1E52B8;
   color: #A3BAE8;
-}
-
-.nav__menu {
-  float: right;
-  margin: 15px 0 0 0;
 }
 
 .nav__menu-item {
@@ -100,34 +116,25 @@ body {
   padding-left: 60px;
 }
 
-.header__logo2 {
-  padding: 0 0 30px 10px;
-}
-
-.header__logo3 {
-  position: absolute;
-  top: 110px;
-  left: 120px;
-}
-
-.main {
+.section {
+  display: flex;
   height: 600px;
-  padding: 40px 0 0 140px;
-  background-image: url(../../images/main/Unionmain.svg), url(../../images/main/Vectormain.svg);
-  background-position: right;
-  background-repeat: no-repeat;
-  background-size: contain;
+  padding: 5% 0 0 5%;
+  background: url(../../images/main/Unionmain.svg) no-repeat 80% 40%,
+  url(../../images/main/Vectormain.svg) no-repeat 100% 100%;
 }
 
-.main__block {
-  padding-top: 20px;
+.section__block {
+  flex-grow: 1;
   font-size: 18px;
   font-weight: bold;
-  display: inline-block;
-  width: 700px;
+}
+.block__title{
+  background: url("../../images/main/border.svg") no-repeat 0 0;
+  padding-top: 20px;
 }
 
-.main__block a {
+.section__block a {
   text-decoration: none;
   color: black;
 }
@@ -185,17 +192,13 @@ body {
   color: #A3BAE8;
 }
 
-.main__video {
+.section__video {
   margin-right: 40px;
   float: right;
-}
-
-.main__video {
   position: relative;
   width: 800px;
   height: 500px;
 }
-
 .video__overlay {
   position: absolute;
   top: 0;
@@ -210,4 +213,62 @@ body {
   background: none;
 }
 
+.swiper-container {
+  width: 100%;
+  height: 100%;
+}
+.swiper-wrapper{
+  height: 100px;
+}
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+
+.section2{
+  display: flex;
+  padding: 5% 0 0 5%;
+  flex-wrap: wrap;
+  background: url("../../images/main/bgsection2.svg") no-repeat 0 30%;
+}
+.section2__block1{
+  flex-grow: 1;
+}
+.block1__title{
+  background: url("../../images/main/border.svg") no-repeat 0 0;
+  padding-top: 20px;
+}
+.section2__name{
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 24px;
+  margin: 20px 0;
+}
+.section2 div{
+  margin-right: 40px;
+}
+.slide__text br{
+  color: white;
+}
+.slide__text:hover{
+  background: #D13058;
+  border-radius: 16px;
+  color: white;
+  padding: 40px;
+  font-weight: bold;
+}
 /*# sourceMappingURL=styles.css.map */

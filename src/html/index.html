@@ -4,20 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
     <link href="https://fonts.googleapis.com/css?family=Ubuntu:300,400,700&display=swap&subset=cyrillic,cyrillic-ext" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../css/csslibs/swiper.min.css">
     <link rel="stylesheet" type="text/css" href="../css/sass/styles.css">
+    <script type="text/javascript" src="../js/jslibs/magnific-popup.js"></script>
+    <script type="text/javascript" src="../js/jslibs/swiper.min.js"></script>
+    <script type="text/javascript" src="../js/script.js"></script>
     <title>Document</title>
 </head>
 <body>
+
+
 <header class="header">
     <div class="header__contacts">
-        <a href="#"><img src="../images/header/Union.svg" class="contacts__icon1"></a>
-        <a href="#"><img src="../images/header/Vector.svg" class="contacts__icon2"></a>
-        <span class="contacts__adress">Псков, ул. Ленина, 3</span>
-        <span class="contacts__mail">info@english.ru</span>
         <span class="contacts__tel">+7 (911) 696 84 63</span>
+        <span class="contacts__mail">info@english.ru</span>
+        <span class="contacts__adress">Псков, ул. Ленина, 3</span>
+        <a href="#"><img src="../images/header/Vector.svg" alt="вконтакте" class="contacts__icon2"></a>
+        <a href="#"><img src="../images/header/Union.svg" alt="инстаграмм" class="contacts__icon1"></a>
     </div>
     <nav class="header__nav">
-        <button class="nav__button">ЗАПИСАТЬСЯ</button>
+        <div class="header__logo">
+            <img src="../images/header/Portret.svg" alt="портрет" class="header__logo1">
+            <img src="../images/header/Joseph.svg" alt="Иосиф" class="header__logo2">
+            <img src="../images/header/English.svg" alt="школа английского языка" class="header__logo3">
+        </div>
         <ul class="nav__menu">
             <li class="nav__menu-item"><a href="">ГЛАВНАЯ</a></li>
             <li class="nav__menu-item"><a href="">О НАС</a></li>
@@ -25,17 +35,13 @@
             <li class="nav__menu-item"><a href="">ПРОГРАММЫ ОБУЧЕНИЯ</a></li>
             <li class="nav__menu-item"><a href="">КОНТАКТЫ</a></li>
         </ul>
+        <button class="nav__button">ЗАПИСАТЬСЯ</button>
     </nav>
-    <div class="header__logo">
-        <img src="../images/header/Portret.svg" class="header__logo1">
-        <img src="../images/header/Joseph.svg" class="header__logo2">
-        <img src="../images/header/English.svg" class="header__logo3">
-    </div>
 </header>
 
 
-<main class="main">
-    <div class="main__block">
+<section class="section">
+    <div class="section__block">
         <h1 class="block__title">КУРСЫ АНГЛИЙСКОГО<br>ЯЗЫКА</h1>
         <span class="block__elem1"><a href="#">Нескучные преподаватели</a></span>
         <span class="block__elem2"><a href="#">Комфортное пространство</a></span><br>
@@ -43,16 +49,56 @@
         <span class="block__elem4"><a href="#">В самом центре города</a></span><br>
         <button class="block__button">ЗАПИСАТЬСЯ</button>
     </div>
-    <div class="main__video">
+    <div class="section__video">
         <div class="video__overlay"></div>
         <video poster="../images/video/videoposter.png" tabindex="0" width="800" height="500" class="video">
-            <source src="../images/video/vid.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
-            <source src="../images/video/vid.webm" type='video/webm; codecs="vp8, vorbis"'>
-            <source src="../images/video/vid.ogv" type='video/ogg; codecs="theora, vorbis"'>
+            <!--<source src="../images/video/vid.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>-->
+            <!--<source src="../images/video/vid.webm" type='video/webm; codecs="vp8, vorbis"'>-->
+            <!--<source src="../images/video/vid.ogv" type='video/ogg; codecs="theora, vorbis"'>-->
         </video>
     </div>
-</main>
-</body>
-</html>
+</section>
+
+<div class="swiper-container">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide"><span class="slide__text">Групповые занятия для школьников<br>подробнее</span></div>
+        <div class="swiper-slide"><span class="slide__text">Групповые занятия для взрослых<br>подробнее</span></div>
+    </div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+</div>
+
+<section class="section2">
+    <div class="section2__block1">
+        <h1 class="block1__title">НАШИ<br>ПРЕПОДАВАТЕЛИ</h1>
+        <p class="block1__text">
+         JOSEPH ENGLISH SCHOOL - это место, где можно изучать<br> английский и знакомиться
+         с культурой англоязычных стран,<br> расти и развиваться.<br><br>
+         Мы приобщаем наших студентов к традициям других народов,<br>
+         отмечаем вместе праздники стран изучаемого языка, тем<br> самым расширяя их кругозор.
+        </p>
+    </div>
+    <div class="section2__block2">
+        <img src="../images/main/Olga.png" alt="Ольга">
+        <p class="section2__name">Ольга Гладкова</p>
+        <p>создатель, руководитель и <br> преподаватель курсов <br>
+            английского языка Joseph English <br> School</p>
+    </div>
+    <div class="section2__block3">
+        <img src="../images/main/Tatyana.png" alt="Татьяна">
+        <p class="section2__name">Татьяна Задой</p>
+        <p>творческий и энергичний<br>специалист Joseph English School</p>
+    </div>
+    <div class="section2__block4">
+        <img src="../images/main/Anastasia.png" alt="Анастасия">
+        <p class="section2__name">Анастасия Кожевникова</p>
+        <p>дипломированный педагог,<br> преподаватель групп<br> дошкольного возраста</p>
+    </div>
+    <div class="section2__block5">
+        <img src="../images/main/Nikolai.png" alt="Николай">
+        <p class="section2__name">Николай Максимов</p>
+        <p>тренерский дар подготовки к<br> экзаменам и совершенно<br> чудесный преподаватель</p>
+    </div>
+</section>
 </body>
 </html>
