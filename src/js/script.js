@@ -25,3 +25,9 @@ var swiper = new Swiper('.swiper-container', {
         prevEl: '.swiper-button-prev',
     },
 });
+
+
+var swiper = new Swiper('.inst-swiper-container',{
+    slidesPerView: 5,
+        loop: true,
+});

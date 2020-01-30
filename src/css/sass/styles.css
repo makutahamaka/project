@@ -4,7 +4,6 @@ body {
   background: #fbfbfb;
 }
 h1{
-  font-family: Ubuntu;
   font-style: normal;
   font-weight: bold;
   font-size: 52px;
@@ -237,8 +236,19 @@ h1{
   -webkit-align-items: center;
   align-items: center;
 }
-
-
+.slide__text-link{
+  color: white;
+  text-decoration: none;
+  font-weight: lighter;
+}
+.slide__text:hover{
+  background: #D13058;
+  border-radius: 16px;
+  color: white;
+  font-weight: bold;
+  padding: 0 10px;
+  line-height: 2;
+}
 .section2{
   display: flex;
   padding: 5% 0 0 5%;
@@ -261,14 +271,36 @@ h1{
 .section2 div{
   margin-right: 40px;
 }
-.slide__text br{
-  color: white;
+.section3{
+  background: url("../../images/main/bgsection3.svg") no-repeat 0 100%,
+  url("../../images/main/2bgsection3.svg") no-repeat 100% 0;
+  height: 660px;
 }
-.slide__text:hover{
-  background: #D13058;
-  border-radius: 16px;
-  color: white;
-  padding: 40px;
-  font-weight: bold;
+.section3__title{
+  background: url("../../images/main/border.svg") no-repeat 50% 0;
+  text-align: center;
+  padding-top: 20px;
+}
+
+.inst-swiper-container {
+  width: 100%;
+  height: 100%;
+}
+.inst-swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
 }
 /*# sourceMappingURL=styles.css.map */
