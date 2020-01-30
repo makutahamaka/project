@@ -9,6 +9,8 @@
     <script type="text/javascript" src="../js/jslibs/magnific-popup.js"></script>
     <script type="text/javascript" src="../js/jslibs/swiper.min.js"></script>
     <script type="text/javascript" src="../js/script.js"></script>
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=API_KEY" type="text/javascript"></script>
+
     <title>Document</title>
 </head>
 <body>
@@ -113,5 +115,60 @@
     </div>
 
 </section>
+
+<section class="section4">
+    <div class="section4_left">
+    <div class="section4__block1">
+        <h1 class="section4__block1-title">О компании</h1>
+        <p class="section4__block1-text">
+            JOSEPH ENGLISH SCHOOL - это место, где можно изучать<br>
+            английский и знакомиться с культурой англоязычных стран,<br>
+            расти и развиваться.<br><br> Мы приобщаем наших студентов к традициям
+            других народов,<br> отмечаем вместе праздники стран изучаемого языка,
+            тем<br> самым расширяя их кругозор.
+        </p>
+    </div>
+    <div class="section4__block2">
+        <p class="section4__block2-text1">+7 (911) 696 84 63</p>
+        <p class="section4__block2-text2"><a href="#">info@english.ru</a></p>
+        <p class="section4__block2-text3">Псков, ул. Ленина, 3</p>
+    </div>
+    </div>
+    <div class="section4_right">
+        <div id="map">
+
+        </div>
+    </div>
+</section>
+
+
+<script type="text/javascript">
+
+    ymaps.ready(init);
+    var myMap;
+
+    function init() {
+
+        myMap = new ymaps.Map("map", {
+            center: [43.238253, 76.945465], // Координаты центра карты
+            zoom: 13 // Маштаб карты
+        });
+
+        myMap.controls.add(
+            new ymaps.control.ZoomControl()  // Добавление элемента управления картой
+        );
+
+        myPlacemark = new ymaps.Placemark([43.238253,76.945465], { // Координаты метки объекта
+            balloonContent: "<div class='ya_map'>Заезжайте в гости!</div>" // Подсказка метки
+        }, {
+            preset: "twirl#redDotIcon" // Тип метки
+        });
+
+        myMap.geoObjects.add(myPlacemark); // Добавление метки
+        myPlacemark.balloon.open(); // Открытие подсказки метки
+
+    };
+
+</script>
 </body>
 </html>

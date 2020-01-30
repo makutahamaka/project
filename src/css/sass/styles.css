@@ -254,6 +254,7 @@ h1{
   padding: 5% 0 0 5%;
   flex-wrap: wrap;
   background: url("../../images/main/bgsection2.svg") no-repeat 0 30%;
+  font-size: 15px;
 }
 .section2__block1{
   flex-grow: 1;
@@ -271,10 +272,13 @@ h1{
 .section2 div{
   margin-right: 40px;
 }
+
+
 .section3{
   background: url("../../images/main/bgsection3.svg") no-repeat 0 100%,
   url("../../images/main/2bgsection3.svg") no-repeat 100% 0;
   height: 660px;
+  font-size: 15px;
 }
 .section3__title{
   background: url("../../images/main/border.svg") no-repeat 50% 0;
@@ -303,4 +307,64 @@ h1{
   -webkit-align-items: center;
   align-items: center;
 }
+
+
+.section4{
+  display: flex;
+  justify-content: space-around;
+  font-size: 15px;
+}
+.section4_left{
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+}
+.section4__block1{
+  padding-left:10%;
+  width: 50%;
+}
+.section4__block1-title{
+  margin: 0;
+  background: url("../../images/main/border.svg") no-repeat 0 0;
+  padding: 20px 0;
+}
+.section4__block2{
+  margin-top: 90px;
+}
+.section4__block2 p{
+  margin-top: 30px;
+  padding-left: 40px;
+  height: 25px;
+}
+
+.section4__block2-text1{
+  background: url("../../images/main/s4icon1.svg") no-repeat left;
+  font-size: 18px;
+  font-weight: bold;
+}
+.section4__block2-text2{
+  background: url("../../images/main/s4icon2.svg") no-repeat left;
+}
+.section4__block2-text2 a{
+  text-decoration: none;
+  color: #1859BE;
+}
+.section4__block2-text3{
+  background: url("../../images/main/s4icon3.svg") no-repeat left;
+}
+.section4_right{
+  display: flex;
+  width: 50%;
+  justify-content: flex-end;
+}
+.ya_map {
+  font-size: 12px;
+  color: #454545;
+}
+
+#map {
+  width: 810px;
+  height: 610px;
+}
+
 /*# sourceMappingURL=styles.css.map */
