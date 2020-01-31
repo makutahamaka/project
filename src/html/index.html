@@ -150,23 +150,22 @@
     function init() {
 
         myMap = new ymaps.Map("map", {
-            center: [43.238253, 76.945465], // Координаты центра карты
-            zoom: 13 // Маштаб карты
+            center: [57.82108935769948,28.315937776224686],
+            zoom: 15
         });
 
         myMap.controls.add(
-            new ymaps.control.ZoomControl()  // Добавление элемента управления картой
+            new ymaps.control.ZoomControl()
         );
 
-        myPlacemark = new ymaps.Placemark([43.238253,76.945465], { // Координаты метки объекта
-            balloonContent: "<div class='ya_map'>Заезжайте в гости!</div>" // Подсказка метки
-        }, {
-            preset: "twirl#redDotIcon" // Тип метки
+        myPlacemark = new ymaps.Placemark([57.819417699963005,28.30718304600006], {},
+            {
+            iconLayout: "default#image",
+            iconImageHref: "../images/main/mappin.svg",
+            iconImageSize: [122, 59],
+            iconImageOffset: [-60, -50]
         });
-
-        myMap.geoObjects.add(myPlacemark); // Добавление метки
-        myPlacemark.balloon.open(); // Открытие подсказки метки
-
+        myMap.geoObjects.add(myPlacemark);
     };
 
 </script>
