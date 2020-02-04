@@ -60,11 +60,24 @@
         </video>
     </div>
 </section>
-
-<div class="swiper-container">
+<div class="swiper1_head">
+<h1 class="swiper1_title">ПРОГРАММЫ ОБУЧЕНИЯ</h1>
+<p class="swiper1_link"><a href="#">все программы обучения</a></p>
+</div>
+<div class="swiper-container swiper1">
     <div class="swiper-wrapper">
-        <div class="swiper-slide"><span class="slide__text">Групповые занятия для школьников<br><a href="#" class="slide__text-link">подробнее</a></span></div>
-        <div class="swiper-slide"><span class="slide__text">Групповые занятия для взрослых<br><a href="#" class="slide__text-link">подробнее</a></span></div>
+        <div class="swiper-slide slide_1"><span class="slide__text">
+        Групповые занятия для школьников<br><a href="#" class="slide__text-link">подробнее</a></span>
+        </div>
+        <div class="swiper-slide slide_2"><span class="slide__text">
+        Групповые занятия для взрослых<br><a href="#" class="slide__text-link">подробнее</a></span>
+        </div>
+        <div class="swiper-slide slide_3"><span class="slide__text">
+        Занятия в паре<br><a href="#" class="slide__text-link">подробнее</a></span>
+        </div>
+        <div class="swiper-slide slide_4"><span class="slide__text">
+        Индивидуальные занятия<br><a href="#" class="slide__text-link">подробнее</a></span>
+        </div>
     </div>
     <div class="swiper-button-next"></div>
     <div class="swiper-button-prev"></div>
@@ -106,11 +119,13 @@
 <section class="section3">
     <h1 class="section3__title">МЫ В ИНСТАГРАММ</h1>
 
-    <div class="inst-swiper-container">
-        <div class="inst-swiper-wrapper">
-            <div class="inst-swiper-slide"></div>
-            <div class="inst-swiper-slide"></div>
-            <div class="inst-swiper-slide"></div>
+    <div class="swiper-container swiper2">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide inst-slide_1"></div>
+            <div class="swiper-slide inst-slide_2"></div>
+            <div class="swiper-slide inst-slide_3"></div>
+            <div class="swiper-slide inst-slide_4"></div>
+            <div class="swiper-slide inst-slide_5"></div>
         </div>
     </div>
 
@@ -167,6 +182,22 @@
         });
         myMap.geoObjects.add(myPlacemark);
     };
+
+    var swiper1 = new Swiper('.swiper1', {
+        slidesPerView: 4,
+        spaceBetween: 30,
+        loop: true,
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+    });
+    var swiper2 = new Swiper('.swiper2', {
+        slidesPerView: 5,
+        spaceBetween: 30,
+        loop: true,
+
+    });
 
 </script>
 </body>

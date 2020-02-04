@@ -19,6 +19,7 @@ function play() {
 
 var swiper = new Swiper('.swiper-container', {
     slidesPerView: 5,
+    spaceBetween: 30,
     loop: true,
     navigation: {
         nextEl: '.swiper-button-next',

@@ -216,8 +216,25 @@ h1{
   width: 100%;
   height: 100%;
 }
-.swiper-wrapper{
-  height: 100px;
+.swiper1_head{
+  display: flex;
+}
+.swiper1_title{
+  background: url("../../images/main/border.svg") no-repeat 50% 0;
+  padding-top: 20px;
+  margin: 0 auto;
+}
+.swiper1_link{
+  background: url("../../images/main/slider1head_arrow.png") no-repeat 100% 10%;
+  padding-right: 20px;
+}
+.swiper1_link a{
+  text-decoration: none;
+  color: #3067D1;
+}
+.swiper1 .swiper-wrapper{
+  height: 500px;
+  position: relative;
 }
 .swiper-slide {
   text-align: center;
@@ -235,6 +252,22 @@ h1{
   -ms-flex-align: center;
   -webkit-align-items: center;
   align-items: center;
+}
+.slide_1{
+  background: url("../../images/main/slider1_teacher.svg") center center no-repeat;
+}
+.slide_2{
+  background: url("../../images/main/slider1_tongue.svg") center center no-repeat;
+}
+.slide_3{
+  background: url("../../images/main/slider1_friends.svg") center center no-repeat;
+}
+.slide_4{
+  background: url("../../images/main/slider1_boat.svg") center center no-repeat;
+}
+.slide__text{
+  position: absolute;
+  top: 400px;
 }
 .slide__text-link{
   color: white;
@@ -285,30 +318,23 @@ h1{
   text-align: center;
   padding-top: 20px;
 }
-
-.inst-swiper-container {
-  width: 100%;
-  height: 100%;
+.swiper2 .swiper-wrapper{
+  height: 400px;
 }
-.inst-swiper-slide {
-  text-align: center;
-  font-size: 18px;
-  background: #fff;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  -webkit-align-items: center;
-  align-items: center;
+.inst-slide_1{
+  background: url("../../images/main/inst-slider6.png") center center no-repeat;
 }
-
-
+.inst-slide_2{
+  background: url("../../images/main/inst-slider2.png") center center no-repeat;
+}
+.inst-slide_3{
+  background: url("../../images/main/inst-slider3.png") center center no-repeat;}
+.inst-slide_4{
+  background: url("../../images/main/inst-slider4.png") center center no-repeat;
+}
+.inst-slide_5{
+  background: url("../../images/main/inst-slider5.png") center center no-repeat;
+}
 .section4{
   display: flex;
   justify-content: space-around;
