@@ -1,3 +1,4 @@
+
 var overlay = document.getElementsByClassName('video__overlay');
 var vid = document.getElementsByClassName('section__video');
 
@@ -17,18 +18,4 @@ function play() {
     }
 }
 
-var swiper = new Swiper('.swiper-container', {
-    slidesPerView: 5,
-    spaceBetween: 30,
-    loop: true,
-    navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-    },
-});
 
-
-var swiper = new Swiper('.inst-swiper-container',{
-    slidesPerView: 5,
-        loop: true,
-});

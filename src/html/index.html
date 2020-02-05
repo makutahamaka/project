@@ -5,12 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
     <link href="https://fonts.googleapis.com/css?family=Ubuntu:300,400,700&display=swap&subset=cyrillic,cyrillic-ext" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="../css/csslibs/swiper.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/csslibs/magnific-popup.css">
     <link rel="stylesheet" type="text/css" href="../css/sass/styles.css">
-    <script type="text/javascript" src="../js/jslibs/magnific-popup.js"></script>
-    <script type="text/javascript" src="../js/jslibs/swiper.min.js"></script>
-    <script type="text/javascript" src="../js/script.js"></script>
-    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=API_KEY" type="text/javascript"></script>
-
     <title>Document</title>
 </head>
 <body>
@@ -37,10 +33,19 @@
             <li class="nav__menu-item"><a href="">ПРОГРАММЫ ОБУЧЕНИЯ</a></li>
             <li class="nav__menu-item"><a href="">КОНТАКТЫ</a></li>
         </ul>
-        <button class="nav__button">ЗАПИСАТЬСЯ</button>
+        <button class="nav__button"><a href="#form" class="popup">ЗАПИСАТЬСЯ</a></button>
     </nav>
 </header>
 
+<div class="hidden">
+    <form id="form">
+        <h1>Напишите нам</h1>
+        <input type="text" name="name" placeholder="Ваше имя">
+        <input type="text" name="email" placeholder="Ваш email">
+        <textarea type="text" name="message" placeholder="Сообщение" ></textarea>
+        <button>отправить сообщение</button>
+    </form>
+</div>
 
 <section class="section">
     <div class="section__block">
@@ -49,7 +54,7 @@
         <span class="block__elem2"><a href="#">Комфортное пространство</a></span><br>
         <span class="block__elem3"><a href="#">Новые игровые методики</a></span>
         <span class="block__elem4"><a href="#">В самом центре города</a></span><br>
-        <button class="block__button">ЗАПИСАТЬСЯ</button>
+        <button class="block__button"><a href="#form" class="popup">ЗАПИСАТЬСЯ</a></button>
     </div>
     <div class="section__video">
         <div class="video__overlay"></div>
@@ -151,14 +156,18 @@
     </div>
     <div class="section4_right">
         <div id="map">
-
         </div>
     </div>
 </section>
 
 
-<script type="text/javascript">
 
+<script type="text/javascript" src="../js/jslibs/jquery-3.4.1.min.js"></script>
+<script type="text/javascript" src="../js/jslibs/magnific-popup.js"></script>
+<script type="text/javascript" src="../js/jslibs/swiper.min.js"></script>
+<script type="text/javascript" src="../js/script.js"></script>
+<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=API_KEY" type="text/javascript"></script>
+<script type="text/javascript">
     ymaps.ready(init);
     var myMap;
 
@@ -198,7 +207,7 @@
         loop: true,
 
     });
-
+    $(".popup").magnificPopup();
 </script>
 </body>
 </html>
