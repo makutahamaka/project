@@ -40,9 +40,11 @@
 <div class="hidden">
     <form id="form">
         <h1>Напишите нам</h1>
-        <input type="text" name="name" placeholder="Ваше имя">
-        <input type="text" name="email" placeholder="Ваш email">
-        <textarea type="text" name="message" placeholder="Сообщение" ></textarea>
+        <input type="text" name="name" placeholder="Ваше имя" class="textform">
+        <input type="text" name="email" placeholder="Ваш email" class="textform">
+        <textarea type="text" name="message" placeholder="Сообщение" class="textform"></textarea>
+        <p><input type="checkbox" name="check" value="agree">Я согласен (согласна)
+        на обработку моих персональных<br> данных</p>
         <button>отправить сообщение</button>
     </form>
 </div>
@@ -153,6 +155,30 @@
         <p class="section4__block2-text2"><a href="#">info@english.ru</a></p>
         <p class="section4__block2-text3">Псков, ул. Ленина, 3</p>
     </div>
+        <div class="swiper-container gallery-top">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide" style="background-image:url(../images/main/slider3.1.png)"></div>
+                <div class="swiper-slide" style="background-image:url(../images/main/slider3.2.png)"></div>
+                <div class="swiper-slide" style="background-image:url(../images/main/slider3.3.png)"></div>
+                <div class="swiper-slide" style="background-image:url(../images/main/slider3.4.png)"></div>
+                <div class="swiper-slide" style="background-image:url(../images/main/slider3.4.png)"></div>
+                <div class="swiper-slide" style="background-image:url(../images/main/slider3.4.png)"></div>
+            </div>
+        </div>
+        <div class="swiper-container gallery-thumbs">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide" style="background-image:url(../images/main/slider3.1.png)"></div>
+                <div class="swiper-slide" style="background-image:url(../images/main/slider3.2.png)"></div>
+                <div class="swiper-slide" style="background-image:url(../images/main/slider3.3.png)"></div>
+                <div class="swiper-slide" style="background-image:url(../images/main/slider3.4.png)"></div>
+                <div class="swiper-slide" style="background-image:url(../images/main/slider3.4.png)"></div>
+                <div class="swiper-slide" style="background-image:url(../images/main/slider3.4.png)"></div>
+            </div>
+            <!--<div class="swiper-button-next"></div>-->
+            <!--<div class="swiper-button-prev"></div>-->
+        </div>
+
+
     </div>
     <div class="section4_right">
         <div id="map">
@@ -160,14 +186,47 @@
     </div>
 </section>
 
+<div class="bottom__cookie-block hidden">
+    <p>Этот веб-сайт использует файлы cookie для повышения удобства работы с веб-сайтом.
+        Переход по ссылке на наш веб-сайт<br> или работа на веб-сайте подразумевают согласие
+        со сбором данных посредством файлов cookie. </p>
+    <a href="javascript:void(0);" class="ok">Принимаю</a>
+
+</div>
+
 
 
 <script type="text/javascript" src="../js/jslibs/jquery-3.4.1.min.js"></script>
+<script src="../js/jslibs/jquery.cookie.js"></script>
 <script type="text/javascript" src="../js/jslibs/magnific-popup.js"></script>
 <script type="text/javascript" src="../js/jslibs/swiper.min.js"></script>
 <script type="text/javascript" src="../js/script.js"></script>
 <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=API_KEY" type="text/javascript"></script>
 <script type="text/javascript">
+
+    $(function() {
+        // Проверяем запись в куках о посещении
+        // Если запись есть - ничего не происходит
+        if (!$.cookie('hideModal')) {
+            // если cookie не установлено появится окно
+            // с задержкой 5 секунд
+            var delay_popup = 1000;
+            setTimeout("document.querySelector('.bottom__cookie-block').style.display='inline-block'", delay_popup);
+        }
+        $.cookie('hideModal', true, {
+            // Время хранения cookie в днях
+            expires: 30,
+            path: '/'
+        });
+    });
+
+    // Закрытие полосы cookie
+
+
+    $('.ok').click(function(){
+        $('.bottom__cookie-block').fadeOut();
+    });
+
     ymaps.ready(init);
     var myMap;
 
@@ -208,6 +267,25 @@
 
     });
     $(".popup").magnificPopup();
+
+    var galleryThumbs = new Swiper('.gallery-thumbs', {
+        spaceBetween: 20,
+        direction: 'vertical',
+        slidesPerView: 4,
+        freeMode: true,
+        watchSlidesVisibility: true,
+        watchSlidesProgress: true,
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+    });
+    var galleryTop = new Swiper('.gallery-top', {
+        spaceBetween: 10,
+        thumbs: {
+            swiper: galleryThumbs
+        }
+    });
 </script>
 </body>
 </html>

@@ -133,15 +133,19 @@ form h1{
   margin: 20px auto;
   color: #000000;
 }
-form input{
+.textform{
   height: 60px;
   width: 100%;
-  margin-bottom: 25px;
+  margin-bottom: 20px;
+  resize: none;
 }
-form textarea{
-  height: 60px;
+form p{
+  margin: 0 0 20px 30px ;
+  height: 30px;
   width: 100%;
-  margin-bottom: 25px;
+}
+p input{
+  margin-right: 10px;
 }
 form button{
   background: #3067D1;
@@ -336,6 +340,7 @@ form button:active{
   flex-wrap: wrap;
   background: url("../../images/main/bgsection2.svg") no-repeat 0 30%;
   font-size: 15px;
+  line-height: 22px;
 }
 .section2__block1{
   flex-grow: 1;
@@ -438,8 +443,63 @@ form button:active{
 }
 
 #map {
+  margin-top: 120px;
   width: 810px;
   height: 610px;
 }
+
+.section4 .swiper-container {
+  width: 80%;
+  height: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 40px;
+}
+.section4 .swiper-slide {
+  background-size: cover;
+  background-position: center;
+}
+.gallery-top {
+  height: 60%;
+  width: 60%;
+}
+.gallery-thumbs {
+  height: 20%;
+  box-sizing: border-box;
+  padding: 20px 0;
+}
+.gallery-thumbs .swiper-slide {
+  width: 20%;
+  height: 20%;
+}
+.gallery-thumbs .swiper-slide-thumb-active {
+  opacity: 0.4;
+}
+
+.bottom__cookie-block{
+  width: 100%;
+  height: 160px;
+  color: #ffffff;
+  background-color: #3067D1;
+  display: none;
+  position: fixed;
+  bottom: 0;
+  z-index: 100000;
+  -webkit-transform: translateZ(0);
+  border-radius: 12px 12px 0 0;
+}
+.bottom__cookie-block p{
+  float: left;
+  margin: 80px;
+}
+.bottom__cookie-block a{
+  text-decoration: none;
+  color: #FCFCFB;;
+  float: right;
+  margin: 80px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
 
 /*# sourceMappingURL=styles.css.map */
