@@ -51,7 +51,7 @@
 
 <section class="section">
     <div class="section__block">
-        <h1 class="block__title">КУРСЫ АНГЛИЙСКОГО<br>ЯЗЫКА</h1>
+        <h1 class="block__title">Курсы английского языка<br>ЯЗЫКА</h1>
         <span class="block__elem1"><a href="#">Нескучные преподаватели</a></span>
         <span class="block__elem2"><a href="#">Комфортное пространство</a></span><br>
         <span class="block__elem3"><a href="#">Новые игровые методики</a></span>
@@ -68,7 +68,7 @@
     </div>
 </section>
 <div class="swiper1_head">
-<h1 class="swiper1_title">ПРОГРАММЫ ОБУЧЕНИЯ</h1>
+<h1 class="swiper1_title">Программы обучения</h1>
 <p class="swiper1_link"><a href="#">все программы обучения</a></p>
 </div>
 <div class="swiper-container swiper1">
@@ -124,8 +124,7 @@
 </section>
 
 <section class="section3">
-    <h1 class="section3__title">МЫ В ИНСТАГРАММ</h1>
-
+    <h1 class="section3__title">Мы в инстаграмм</h1>
     <div class="swiper-container swiper2">
         <div class="swiper-wrapper">
             <div class="swiper-slide inst-slide_1"></div>
@@ -135,7 +134,6 @@
             <div class="swiper-slide inst-slide_5"></div>
         </div>
     </div>
-
 </section>
 
 <section class="section4">
@@ -177,8 +175,6 @@
             <!--<div class="swiper-button-next"></div>-->
             <!--<div class="swiper-button-prev"></div>-->
         </div>
-
-
     </div>
     <div class="section4_right">
         <div id="map">
@@ -191,10 +187,36 @@
         Переход по ссылке на наш веб-сайт<br> или работа на веб-сайте подразумевают согласие
         со сбором данных посредством файлов cookie. </p>
     <a href="javascript:void(0);" class="ok">Принимаю</a>
-
 </div>
 
-
+<footer>
+    <nav class="header__nav">
+        <div class="header__logo">
+            <img src="../images/header/Portret.svg" alt="портрет" class="header__logo1">
+            <img src="../images/header/Joseph.svg" alt="Иосиф" class="header__logo2">
+            <img src="../images/header/English.svg" alt="школа английского языка" class="header__logo3">
+        </div>
+        <ul class="nav__menu">
+            <li class="nav__menu-item"><a href="">ГЛАВНАЯ</a></li>
+            <li class="nav__menu-item"><a href="">О НАС</a></li>
+            <li class="nav__menu-item"><a href="">НАШИ ПРЕПОДАВАТЕЛИ</a></li>
+            <li class="nav__menu-item"><a href="">ПРОГРАММЫ ОБУЧЕНИЯ</a></li>
+            <li class="nav__menu-item"><a href="">КОНТАКТЫ</a></li>
+        </ul>
+        <button class="nav__button"><a href="#form" class="popup">ЗАПИСАТЬСЯ</a></button>
+    </nav>
+    <div class="header__contacts">
+        <span class="contacts__tel">+7 (911) 696 84 63</span>
+        <span class="contacts__mail">info@english.ru</span>
+        <span class="contacts__adress">Псков, ул. Ленина, 3</span>
+        <a href="#"><img src="../images/header/Vector.svg" alt="вконтакте" class="contacts__icon2"></a>
+        <a href="#"><img src="../images/header/Union.svg" alt="инстаграмм" class="contacts__icon1"></a>
+    </div>
+    <div class="footer__last">
+        <span class="last__left-text">Политика конфиденциальности</span>
+        <span class="last__right-text">Сделано в агенстве интернет-рекламі Coffee Studio</span>
+    </div>
+</footer>
 
 <script type="text/javascript" src="../js/jslibs/jquery-3.4.1.min.js"></script>
 <script src="../js/jslibs/jquery.cookie.js"></script>
@@ -205,23 +227,15 @@
 <script type="text/javascript">
 
     $(function() {
-        // Проверяем запись в куках о посещении
-        // Если запись есть - ничего не происходит
         if (!$.cookie('hideModal')) {
-            // если cookie не установлено появится окно
-            // с задержкой 5 секунд
             var delay_popup = 1000;
             setTimeout("document.querySelector('.bottom__cookie-block').style.display='inline-block'", delay_popup);
         }
         $.cookie('hideModal', true, {
-            // Время хранения cookie в днях
             expires: 30,
             path: '/'
         });
     });
-
-    // Закрытие полосы cookie
-
 
     $('.ok').click(function(){
         $('.bottom__cookie-block').fadeOut();
@@ -270,7 +284,6 @@
 
     var galleryThumbs = new Swiper('.gallery-thumbs', {
         spaceBetween: 20,
-        direction: 'vertical',
         slidesPerView: 4,
         freeMode: true,
         watchSlidesVisibility: true,
