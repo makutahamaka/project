@@ -1,3 +1,121 @@
-.header{
-  width: 100%;
+%contacts {
+  margin-right: 50px;
+  padding-left: 25px;
+  display: flex;
+  align-items: center;
 }
+%link{
+  color: #ffffff;
+  letter-spacing: 1px;
+  text-decoration: none;
+}
+.header {
+  height: 120px;
+  margin: 10px 20px 0 40px;
+  &__contacts {
+    height: 50px;
+    display: flex;
+    justify-content: flex-end;
+    span {
+      font-size: 13px;
+      color: rgba(37, 37, 37, 0.3);
+      height: 18px;
+    }
+  }
+}
+.contacts__icon2 {
+  margin-right: 20px;
+}
+.contacts__adress {
+  @extend %contacts;
+  &:before {
+    content: '';
+    display: block;
+    margin-right: 10px;
+    @include sprite($pin);
+  }
+}
+.contacts__mail {
+  @extend %contacts;
+  &:before {
+    content: '';
+    display: block;
+    margin-right: 10px;
+    @include sprite($union);
+  }
+}
+.contacts__tel {
+  @extend %contacts;
+  &:before {
+    content: '';
+    display: block;
+    margin-right: 10px;
+    @include sprite($phone);
+  }
+}
+.header__nav{
+  display: flex;
+  justify-content: space-between;
+}
+.header__logo{
+  position: relative;
+  flex-grow: 1;
+}
+.header__logo1 {
+  position: absolute;
+  bottom: 1px;
+}
+.header__logo2 {
+  position: absolute;
+  left: 70px;
+}
+.header__logo3 {
+  position: absolute;
+  top: 40px;
+  left: 70px;
+}
+.nav__button {
+  background: #3067D1;
+  border-radius: 4px;
+  height: 50px;
+  width: 160px;
+  border: 0;
+  a{
+    @extend %link;
+  }
+  &:hover {
+    border: 4px solid #5583DD;
+  }
+  &:active {
+    background: #1E52B8;
+    color: #A3BAE8;
+  }
+}
+.nav__menu-item {
+  display: inline-block;
+  margin-right: 35px;
+  &:last-child {
+    margin-right: 45px;
+  }
+  &:not(:last-child):after {
+    content: "/";
+    color: #BCCBDE;
+    transform: rotate(135deg);
+    padding-left: 50px;
+  }
+  a {
+    text-decoration: none;
+    color: black;
+  }
+  &:first-child {
+    background: url(../images/header/Rectangle.svg) center no-repeat;
+    padding-left: 60px;
+  }
+}
+
+
+
+
+
+
+

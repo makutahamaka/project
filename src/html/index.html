@@ -1,42 +1,6 @@
-<!doctype html>
-<html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-    <link href="https://fonts.googleapis.com/css?family=Ubuntu:300,400,700&display=swap&subset=cyrillic,cyrillic-ext" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="../css/csslibs/swiper.min.css">
-    <link rel="stylesheet" type="text/css" href="../css/csslibs/magnific-popup.css">
-    <link rel="stylesheet" type="text/css" href="../css/sass/styles.css">
-    <title>Document</title>
-</head>
-<body>
+{% extends 'layouts/_base.html' %}
 
-
-<header class="header">
-    <div class="header__contacts">
-        <span class="contacts__tel">+7 (911) 696 84 63</span>
-        <span class="contacts__mail">info@english.ru</span>
-        <span class="contacts__adress">Псков, ул. Ленина, 3</span>
-        <a href="#"><img src="../images/header/Vector.svg" alt="вконтакте" class="contacts__icon2"></a>
-        <a href="#"><img src="../images/header/Union.svg" alt="инстаграмм" class="contacts__icon1"></a>
-    </div>
-    <nav class="header__nav">
-        <div class="header__logo">
-            <img src="../images/header/Portret.svg" alt="портрет" class="header__logo1">
-            <img src="../images/header/Joseph.svg" alt="Иосиф" class="header__logo2">
-            <img src="../images/header/English.svg" alt="школа английского языка" class="header__logo3">
-        </div>
-        <ul class="nav__menu">
-            <li class="nav__menu-item"><a href="">ГЛАВНАЯ</a></li>
-            <li class="nav__menu-item"><a href="">О НАС</a></li>
-            <li class="nav__menu-item"><a href="">НАШИ ПРЕПОДАВАТЕЛИ</a></li>
-            <li class="nav__menu-item"><a href="">ПРОГРАММЫ ОБУЧЕНИЯ</a></li>
-            <li class="nav__menu-item"><a href="">КОНТАКТЫ</a></li>
-        </ul>
-        <button class="nav__button"><a href="#form" class="popup">ЗАПИСАТЬСЯ</a></button>
-    </nav>
-</header>
-
+{% block content %}
 <div class="hidden">
     <form id="form">
         <h1>Напишите нам</h1>
@@ -59,9 +23,11 @@
         <button class="block__button"><a href="#form" class="popup">ЗАПИСАТЬСЯ</a></button>
     </div>
     <div class="section__video">
-        <div class="video__overlay"></div>
-        <video poster="../images/video/videoposter.png" tabindex="0" width="800" height="500" class="video">
-            <!--<source src="../images/video/vid.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>-->
+        <button id="js-video-play" type="button">play</button>
+        <button id="js-video-pause" style="display: none" type="button">pause</button>
+        <div class="video__overlay" style="display: none"></div>
+        <video controls poster="/video/video.jpg" src="/video/video.mp4" tabindex="0" width="800" height="500" class="video">
+            <!--<source src="/video/vid.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>-->
             <!--<source src="../images/video/vid.webm" type='video/webm; codecs="vp8, vorbis"'>-->
             <!--<source src="../images/video/vid.ogv" type='video/ogg; codecs="theora, vorbis"'>-->
         </video>
@@ -101,23 +67,23 @@
         </p>
     </div>
     <div class="section2__block2">
-        <img src="../images/main/Olga.png" alt="Ольга">
+        <img src="../images/general/main/Olga.png" alt="Ольга">
         <p class="section2__name">Ольга Гладкова</p>
         <p>создатель, руководитель и <br> преподаватель курсов <br>
             английского языка Joseph English <br> School</p>
     </div>
     <div class="section2__block3">
-        <img src="../images/main/Tatyana.png" alt="Татьяна">
+        <img src="../images/general/main/Tatyana.png" alt="Татьяна">
         <p class="section2__name">Татьяна Задой</p>
         <p>творческий и энергичний<br>специалист Joseph English School</p>
     </div>
     <div class="section2__block4">
-        <img src="../images/main/Anastasia.png" alt="Анастасия">
+        <img src="../images/general/main/Anastasia.png" alt="Анастасия">
         <p class="section2__name">Анастасия Кожевникова</p>
         <p>дипломированный педагог,<br> преподаватель групп<br> дошкольного возраста</p>
     </div>
     <div class="section2__block5">
-        <img src="../images/main/Nikolai.png" alt="Николай">
+        <img src="../images/general/main/Nikolai.png" alt="Николай">
         <p class="section2__name">Николай Максимов</p>
         <p>тренерский дар подготовки к<br> экзаменам и совершенно<br> чудесный преподаватель</p>
     </div>
@@ -155,22 +121,22 @@
     </div>
         <div class="swiper-container gallery-top">
             <div class="swiper-wrapper">
-                <div class="swiper-slide" style="background-image:url(../images/main/slider3.1.png)"></div>
-                <div class="swiper-slide" style="background-image:url(../images/main/slider3.2.png)"></div>
-                <div class="swiper-slide" style="background-image:url(../images/main/slider3.3.png)"></div>
-                <div class="swiper-slide" style="background-image:url(../images/main/slider3.4.png)"></div>
-                <div class="swiper-slide" style="background-image:url(../images/main/slider3.4.png)"></div>
-                <div class="swiper-slide" style="background-image:url(../images/main/slider3.4.png)"></div>
+                <div class="swiper-slide" style="background-image:url(../images/general/main/slider3.1.png)"></div>
+                <div class="swiper-slide" style="background-image:url(../images/general/main/slider3.2.png)"></div>
+                <div class="swiper-slide" style="background-image:url(../images/general/main/slider3.3.png)"></div>
+                <div class="swiper-slide" style="background-image:url(../images/general/main/slider3.4.png)"></div>
+                <div class="swiper-slide" style="background-image:url(../images/general/main/slider3.4.png)"></div>
+                <div class="swiper-slide" style="background-image:url(../images/general/main/slider3.4.png)"></div>
             </div>
         </div>
         <div class="swiper-container gallery-thumbs">
             <div class="swiper-wrapper">
-                <div class="swiper-slide" style="background-image:url(../images/main/slider3.1.png)"></div>
-                <div class="swiper-slide" style="background-image:url(../images/main/slider3.2.png)"></div>
-                <div class="swiper-slide" style="background-image:url(../images/main/slider3.3.png)"></div>
-                <div class="swiper-slide" style="background-image:url(../images/main/slider3.4.png)"></div>
-                <div class="swiper-slide" style="background-image:url(../images/main/slider3.4.png)"></div>
-                <div class="swiper-slide" style="background-image:url(../images/main/slider3.4.png)"></div>
+                <div class="swiper-slide" style="background-image:url(../images/general/main/slider3.1.png)"></div>
+                <div class="swiper-slide" style="background-image:url(../images/general/main/slider3.2.png)"></div>
+                <div class="swiper-slide" style="background-image:url(../images/general/main/slider3.3.png)"></div>
+                <div class="swiper-slide" style="background-image:url(../images/general/main/slider3.4.png)"></div>
+                <div class="swiper-slide" style="background-image:url(../images/general/main/slider3.4.png)"></div>
+                <div class="swiper-slide" style="background-image:url(../images/general/main/slider3.4.png)"></div>
             </div>
             <!--<div class="swiper-button-next"></div>-->
             <!--<div class="swiper-button-prev"></div>-->
@@ -188,117 +154,4 @@
         со сбором данных посредством файлов cookie. </p>
     <a href="javascript:void(0);" class="ok">Принимаю</a>
 </div>
-
-<footer>
-    <nav class="header__nav">
-        <div class="header__logo">
-            <img src="../images/header/Portret.svg" alt="портрет" class="header__logo1">
-            <img src="../images/header/Joseph.svg" alt="Иосиф" class="header__logo2">
-            <img src="../images/header/English.svg" alt="школа английского языка" class="header__logo3">
-        </div>
-        <ul class="nav__menu">
-            <li class="nav__menu-item"><a href="">ГЛАВНАЯ</a></li>
-            <li class="nav__menu-item"><a href="">О НАС</a></li>
-            <li class="nav__menu-item"><a href="">НАШИ ПРЕПОДАВАТЕЛИ</a></li>
-            <li class="nav__menu-item"><a href="">ПРОГРАММЫ ОБУЧЕНИЯ</a></li>
-            <li class="nav__menu-item"><a href="">КОНТАКТЫ</a></li>
-        </ul>
-        <button class="nav__button"><a href="#form" class="popup">ЗАПИСАТЬСЯ</a></button>
-    </nav>
-    <div class="header__contacts">
-        <span class="contacts__tel">+7 (911) 696 84 63</span>
-        <span class="contacts__mail">info@english.ru</span>
-        <span class="contacts__adress">Псков, ул. Ленина, 3</span>
-        <a href="#"><img src="../images/header/Vector.svg" alt="вконтакте" class="contacts__icon2"></a>
-        <a href="#"><img src="../images/header/Union.svg" alt="инстаграмм" class="contacts__icon1"></a>
-    </div>
-    <div class="footer__last">
-        <span class="last__left-text">Политика конфиденциальности</span>
-        <span class="last__right-text">Сделано в агенстве интернет-рекламі Coffee Studio</span>
-    </div>
-</footer>
-
-<script type="text/javascript" src="../js/jslibs/jquery-3.4.1.min.js"></script>
-<script src="../js/jslibs/jquery.cookie.js"></script>
-<script type="text/javascript" src="../js/jslibs/magnific-popup.js"></script>
-<script type="text/javascript" src="../js/jslibs/swiper.min.js"></script>
-<script type="text/javascript" src="../js/script.js"></script>
-<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=API_KEY" type="text/javascript"></script>
-<script type="text/javascript">
-
-    $(function() {
-        if (!$.cookie('hideModal')) {
-            var delay_popup = 1000;
-            setTimeout("document.querySelector('.bottom__cookie-block').style.display='inline-block'", delay_popup);
-        }
-        $.cookie('hideModal', true, {
-            expires: 30,
-            path: '/'
-        });
-    });
-
-    $('.ok').click(function(){
-        $('.bottom__cookie-block').fadeOut();
-    });
-
-    ymaps.ready(init);
-    var myMap;
-
-    function init() {
-
-        myMap = new ymaps.Map("map", {
-            center: [57.82108935769948,28.315937776224686],
-            zoom: 15
-        });
-
-        myMap.controls.add(
-            new ymaps.control.ZoomControl()
-        );
-
-        myPlacemark = new ymaps.Placemark([57.819417699963005,28.30718304600006], {},
-            {
-            iconLayout: "default#image",
-            iconImageHref: "../images/main/mappin.svg",
-            iconImageSize: [122, 59],
-            iconImageOffset: [-60, -50]
-        });
-        myMap.geoObjects.add(myPlacemark);
-    };
-
-    var swiper1 = new Swiper('.swiper1', {
-        slidesPerView: 4,
-        spaceBetween: 30,
-        loop: true,
-        navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-        },
-    });
-    var swiper2 = new Swiper('.swiper2', {
-        slidesPerView: 5,
-        spaceBetween: 30,
-        loop: true,
-
-    });
-    $(".popup").magnificPopup();
-
-    var galleryThumbs = new Swiper('.gallery-thumbs', {
-        spaceBetween: 20,
-        slidesPerView: 4,
-        freeMode: true,
-        watchSlidesVisibility: true,
-        watchSlidesProgress: true,
-        navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-        },
-    });
-    var galleryTop = new Swiper('.gallery-top', {
-        spaceBetween: 10,
-        thumbs: {
-            swiper: galleryThumbs
-        }
-    });
-</script>
-</body>
-</html>
+{% endblock %}
