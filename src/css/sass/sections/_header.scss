@@ -4,10 +4,34 @@
   display: flex;
   align-items: center;
 }
-%link{
+%linkWhite{
   color: #ffffff;
   letter-spacing: 1px;
   text-decoration: none;
+}
+
+%button{
+  background: #3067D1;
+  border-radius: 4px;
+  height: 50px;
+  width: 160px;
+  border: 0;
+  @media (max-width: 1366px) {
+    height: 40px;
+    width: 120px;
+    font-size: 12px;
+    text-transform: uppercase;
+  }
+  a{
+    @extend %linkWhite;
+  }
+  &:hover {
+    border: 4px solid #5583DD;
+  }
+  &:active {
+    background: #1E52B8;
+    color: #A3BAE8;
+  }
 }
 .header {
   height: 120px;
@@ -56,6 +80,9 @@
 .header__nav{
   display: flex;
   justify-content: space-between;
+  .nav__menu{
+    margin-top: 10px;
+  }
 }
 .header__logo{
   position: relative;
@@ -75,21 +102,7 @@
   left: 70px;
 }
 .nav__button {
-  background: #3067D1;
-  border-radius: 4px;
-  height: 50px;
-  width: 160px;
-  border: 0;
-  a{
-    @extend %link;
-  }
-  &:hover {
-    border: 4px solid #5583DD;
-  }
-  &:active {
-    background: #1E52B8;
-    color: #A3BAE8;
-  }
+  @extend %button;
 }
 .nav__menu-item {
   display: inline-block;
@@ -102,7 +115,11 @@
     color: #BCCBDE;
     transform: rotate(135deg);
     padding-left: 50px;
-  }
+    @media (max-width: 1366px) {
+      content: none;
+      padding: 0;
+    }
+  } 
   a {
     text-decoration: none;
     color: black;
@@ -110,6 +127,9 @@
   &:first-child {
     background: url(../images/header/Rectangle.svg) center no-repeat;
     padding-left: 60px;
+    @media (max-width: 1366px) {
+      padding: 0 30px;
+    }
   }
 }
 
