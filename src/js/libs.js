@@ -11,10 +11,15 @@ $(document).ready(function () {
         });
     });
 
+    $('.ok').click(function(){
+        $('.bottom__cookie-block').fadeOut();
+    });
+
+
     $('#js-video-play').on('click', function () {
         $('.video').trigger('play');
         $(this).hide()
-        $('#js-video-pause').show()
+        // $('#js-video-pause').show()
     })
     $('#js-video-pause').on('click', function () {
         $('.video').trigger('pause');
@@ -22,9 +27,6 @@ $(document).ready(function () {
         $('#js-video-play').show()
     })
 
-    $('.ok').click(function(){
-        $('.bottom__cookie-block').fadeOut();
-    });
 
     ymaps.ready(init);
     var myMap;
