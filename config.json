@@ -6,6 +6,8 @@
     "./src/js/jslibs/jquery-3.4.1.min.js"
   ],
   "addJsAfter": [
+    "./src/js/jslibs/jquery.cookie.js",
+    "./src/js/jslibs/magnific-popup.js",
     "./src/js/jslibs/swiper.min.js"
   ],
   "copiedJs": [

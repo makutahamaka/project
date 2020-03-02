@@ -19,7 +19,6 @@
     "and_ff 67",
     "and_qq 1.2",
     "and_uc 11.8",
-    "android 67",
     "baidu 7.12",
     "bb 10",
     "chrome 60",
@@ -76,6 +75,6 @@
   },
   "dependencies": {
     "jquery": "^3.4.1",
-    "swiper": "^4.5.0"
+    "swiper": "^4.5.1"
   }
 }

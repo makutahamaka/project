@@ -1,5 +1,20 @@
 <header class="header">
-    <div class="wrapper">
-        header
+    <div class="header__contacts">
+        <span class="contacts__tel">+7 (911) 696 84 63</span>
+        <span class="contacts__mail">info@english.ru</span>
+        <span class="contacts__adress">Псков, ул. Ленина, 3</span>
+        <a href="#"><img src="../images/header/Vector.svg" alt="вконтакте" class="contacts__icon2"></a>
+        <a href="#"><img src="../images/header/Union.svg" alt="инстаграмм" class="contacts__icon1"></a>
     </div>
+    <nav class="header__nav">
+        {% include '../blocks/logotype.html' %}
+        <ul class="nav__menu">
+            <li class="nav__menu-item"><a href="">ГЛАВНАЯ</a></li>
+            <li class="nav__menu-item"><a href="">О НАС</a></li>
+            <li class="nav__menu-item"><a href="">НАШИ ПРЕПОДАВАТЕЛИ</a></li>
+            <li class="nav__menu-item"><a href="">ПРОГРАММЫ ОБУЧЕНИЯ</a></li>
+            <li class="nav__menu-item"><a href="">КОНТАКТЫ</a></li>
+        </ul>
+        <button class="nav__button"><a href="#form" class="popup">записаться</a></button>
+    </nav>
 </header>
